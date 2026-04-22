@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de clientes | Tienda comercial</title>
+    <!-- HTML: enlaza la hoja de estilos CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="contenedor">
+      <!-- HTML: estructura semántica principal del formulario -->
+      <section class="tarjeta">
+        <h1>Registro de clientes</h1>
+        <p class="descripcion">
+          Complete el formulario para recibir promociones de nuestra tienda.
+        </p>
+
+        <form id="formRegistro" novalidate>
+          <div class="campo">
+            <label for="nombreApellido">Nombre y apellido *</label>
+            <input
+              type="text"
+              id="nombreApellido"
+              name="nombreApellido"
+              placeholder="Ej: Ana Pérez"
+              required
+            />
+          </div>
+
+          <div class="campo">
+            <label for="correo">Correo electrónico *</label>
+            <input
+              type="email"
+              id="correo"
+              name="correo"
+              placeholder="Ej: ana@email.com"
+              required
+            />
+          </div>
+
+          <div class="campo">
+            <label for="telefono">Teléfono *</label>
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              placeholder="Ej: 099123456"
+              required
+            />
+          </div>
+
+          <div class="campo">
+            <label for="ciudad">Ciudad</label>
+            <input
+              type="text"
+              id="ciudad"
+              name="ciudad"
+              placeholder="Ej: Quito"
+            />
+          </div>
+
+          <div class="campo">
+            <label for="fechaNacimiento">Fecha de nacimiento</label>
+            <input
+              type="date"
+              id="fechaNacimiento"
+              name="fechaNacimiento"
+            />
+          </div>
+
+          <button type="submit" class="btn-guardar">Guardar</button>
+          <p id="mensaje" class="mensaje" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <!-- HTML: enlaza el archivo JavaScript para validación y lógica -->
+    <script src="script.js"></script>
+  </body>
+</html>
